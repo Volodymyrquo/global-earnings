@@ -2,14 +2,31 @@ import React, { useContext } from 'react'
 import './assets/scss/main.scss'
 import { GlobalEarningsBtn } from './components'
 import { Context } from './context/context'
-import { HashRouter as Router } from 'react-router-dom'
+import { Switch, useRouteMatch, Route } from 'react-router-dom'
+import {
+  ReferralsProgram,
+  RewardsProgram,
+  TotalsBySections,
+} from './components'
+
 const App = () => {
-  const { page } = useContext(Context)
+  const { path } = useRouteMatch()
+
+  console.log('##### path ' + path)
+
   return (
-    <Router>
+    <>
       <GlobalEarningsBtn />
-      {page}
-    </Router>
+
+      <Switch>
+        <Route
+          path={`${path}/referrals_program`}
+          component={ReferralsProgram}
+        />
+        <Route path={`${path}/rewards_program`} component={RewardsProgram} />
+        <Route path={`${path}/statistics`} component={TotalsBySections} />
+      </Switch>
+    </>
   )
 }
 

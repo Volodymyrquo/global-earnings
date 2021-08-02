@@ -1,21 +1,21 @@
 import React, { useEffect, useContext } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useRouteMatch } from 'react-router-dom'
 import { Context } from '../context/context'
 import iconRewardsGrey from '../assets/images/sumra/icon-rewards-grey.svg'
 import iconStatisticsGrey from '../assets/images/sumra/icon-statistics-grey.svg'
 import iconReferralsGrey from '../assets/images/sumra/icon-referrals-grey.svg'
 
 const GlobalEarningsBtn = () => {
-  debugger
   const { setPage, pageId } = useContext(Context)
+  const { url } = useRouteMatch()
   return (
     <div className='page-content__wrap'>
       <section className='page-content__global-earnings global-earnings'>
         <Link
-          to='/referrals/'
-          onClick={() => {
+          to={`${url}/referrals_program`}
+          /*  onClick={() => {
             setPage('referralsProgram')
-          }}
+          }} */
           className={
             pageId === 'referralsProgram'
               ? 'link-active'
@@ -29,13 +29,15 @@ const GlobalEarningsBtn = () => {
           Referrals program
         </Link>
         <Link
-          to='/referrals/'
+          to={`${url}/rewards_program`}
           className={
             pageId === 'rewardsProgram' ? 'link-active' : 'global-earnings__btn'
           }
-          onClick={() => {
+          /*           onClick={() => {
             setPage('rewardsProgram')
-          }}>
+          }}
+ */
+        >
           <img
             src={iconRewardsGrey}
             alt='referrals'
@@ -44,15 +46,17 @@ const GlobalEarningsBtn = () => {
           Rewards program
         </Link>
         <Link
-          to='/referrals/'
+          to={`${url}/statistics`}
           className={
             pageId === 'statisticsTable'
               ? 'link-active'
               : 'global-earnings__btn'
           }
-          onClick={() => {
+          /*           onClick={() => {
             setPage('statisticsTable')
-          }}>
+          }}
+ */
+        >
           <img
             src={iconStatisticsGrey}
             alt='referrals'

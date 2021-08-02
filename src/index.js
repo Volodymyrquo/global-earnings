@@ -1,12 +1,15 @@
 import React from 'react'
 import { Provider } from './context/context'
 import App from './App'
+import { HashRouter as Router } from 'react-router-dom'
 
 const index = () => {
   return (
-    <Provider>
-      <App />
-    </Provider>
+    <Router>
+      <Provider>
+        <App />
+      </Provider>
+    </Router>
   )
 }
 
