@@ -1,7 +1,6 @@
 import React, { useContext } from 'react'
 import './assets/scss/main.scss'
 import { GlobalEarningsBtn } from './components'
-import { Context } from './context/context'
 import { Switch, useRouteMatch, Route } from 'react-router-dom'
 import {
   ReferralsProgram,

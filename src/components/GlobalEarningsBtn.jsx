@@ -1,25 +1,27 @@
-import React, { useEffect, useContext } from 'react'
-import { Link, useRouteMatch } from 'react-router-dom'
-import { Context } from '../context/context'
+import React, { useState } from 'react'
+import { Link } from 'react-router-dom'
 import iconRewardsGrey from '../assets/images/sumra/icon-rewards-grey.svg'
 import iconStatisticsGrey from '../assets/images/sumra/icon-statistics-grey.svg'
 import iconReferralsGrey from '../assets/images/sumra/icon-referrals-grey.svg'
 
 const GlobalEarningsBtn = ({ path }) => {
-  const { setPage, pageId } = useContext(Context)
+  const [activeButton, setActiveButton] = useState('/referrals_program')
+  const handleOnClick = (url) => {
+    setActiveButton(url)
+  }
   return (
     <div className='page-content__wrap'>
       <section className='page-content__global-earnings global-earnings'>
         <Link
           to={`${path}/referrals_program`}
-          /*  onClick={() => {
-            setPage('referralsProgram')
-          }} */
           className={
-            pageId === 'referralsProgram'
+            activeButton === `/referrals_program`
               ? 'link-active'
               : 'global-earnings__btn'
-          }>
+          }
+          onClick={() => {
+            handleOnClick(`/referrals_program`)
+          }}>
           <img
             src={iconReferralsGrey}
             alt='referrals'
@@ -30,13 +32,13 @@ const GlobalEarningsBtn = ({ path }) => {
         <Link
           to={`${path}/rewards_program`}
           className={
-            pageId === 'rewardsProgram' ? 'link-active' : 'global-earnings__btn'
+            activeButton === `/rewards_program`
+              ? 'link-active'
+              : 'global-earnings__btn'
           }
-          /*           onClick={() => {
-            setPage('rewardsProgram')
-          }}
- */
-        >
+          onClick={() => {
+            handleOnClick(`/rewards_program`)
+          }}>
           <img
             src={iconRewardsGrey}
             alt='referrals'
@@ -47,15 +49,13 @@ const GlobalEarningsBtn = ({ path }) => {
         <Link
           to={`${path}/statistics`}
           className={
-            pageId === 'statisticsTable'
+            activeButton === `/statistics`
               ? 'link-active'
               : 'global-earnings__btn'
           }
-          /*           onClick={() => {
-            setPage('statisticsTable')
-          }}
- */
-        >
+          onClick={() => {
+            handleOnClick(`/statistics`)
+          }}>
           <img
             src={iconStatisticsGrey}
             alt='referrals'
