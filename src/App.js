@@ -9,14 +9,10 @@ import {
   TotalsBySections,
 } from './components'
 
-const App = () => {
-  const { path } = useRouteMatch()
-
-  console.log('##### path ' + path)
-
+const App = ({ path }) => {
   return (
     <>
-      <GlobalEarningsBtn />
+      <GlobalEarningsBtn path={path} />
 
       <Switch>
         <Route

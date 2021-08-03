@@ -5,14 +5,13 @@ import iconRewardsGrey from '../assets/images/sumra/icon-rewards-grey.svg'
 import iconStatisticsGrey from '../assets/images/sumra/icon-statistics-grey.svg'
 import iconReferralsGrey from '../assets/images/sumra/icon-referrals-grey.svg'
 
-const GlobalEarningsBtn = () => {
+const GlobalEarningsBtn = ({ path }) => {
   const { setPage, pageId } = useContext(Context)
-  const { url } = useRouteMatch()
   return (
     <div className='page-content__wrap'>
       <section className='page-content__global-earnings global-earnings'>
         <Link
-          to={`${url}/referrals_program`}
+          to={`${path}/referrals_program`}
           /*  onClick={() => {
             setPage('referralsProgram')
           }} */
@@ -29,7 +28,7 @@ const GlobalEarningsBtn = () => {
           Referrals program
         </Link>
         <Link
-          to={`${url}/rewards_program`}
+          to={`${path}/rewards_program`}
           className={
             pageId === 'rewardsProgram' ? 'link-active' : 'global-earnings__btn'
           }
@@ -46,7 +45,7 @@ const GlobalEarningsBtn = () => {
           Rewards program
         </Link>
         <Link
-          to={`${url}/statistics`}
+          to={`${path}/statistics`}
           className={
             pageId === 'statisticsTable'
               ? 'link-active'

@@ -3,11 +3,11 @@ import { Provider } from './context/context'
 import App from './App'
 import { HashRouter as Router } from 'react-router-dom'
 
-const index = () => {
+const index = (props) => {
   return (
     <Router>
       <Provider>
-        <App />
+        <App {...props} />
       </Provider>
     </Router>
   )
