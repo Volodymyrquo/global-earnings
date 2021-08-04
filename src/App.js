@@ -1,7 +1,7 @@
 import React, { useContext } from 'react'
 import 'common-library/src/assets/scss/styles.scss'
 import { GlobalEarningsBtn } from './components'
-import { Switch, Route } from 'react-router-dom'
+import { Switch, Route, Redirect } from 'react-router-dom'
 import {
   ReferralsProgram,
   RewardsProgram,
@@ -14,6 +14,12 @@ const App = ({ path }) => {
       <GlobalEarningsBtn path={path} />
 
       <Switch>
+        <Route exact path='/'>
+          <Redirect to={`${path}/referrals_program`} />
+        </Route>
+        <Route exact path={`${path}`}>
+          <Redirect to={`${path}/referrals_program`} />
+        </Route>
         <Route
           path={`${path}/referrals_program`}
           component={ReferralsProgram}
