@@ -7,6 +7,7 @@ module.exports = {
     path: path.resolve('build'),
     filename: 'index.js',
     libraryTarget: 'commonjs2',
+    publicPath: './build/',
   },
   module: {
     rules: [

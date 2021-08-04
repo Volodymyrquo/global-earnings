@@ -14,7 +14,6 @@ import upto from '../assets/images/users/upto.svg'
 import people from '../assets/images/users/people.svg'
 import pers from '../assets/images/users/pers.svg'
 import EarningsChart from './earningsChart'
-
 import { Link } from 'react-router-dom'
 
 const ReferralsProgram = ({ nameBronzeBtn }) => {
