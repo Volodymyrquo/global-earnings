@@ -41,6 +41,7 @@
     "@fontsource/noto-serif": "^4.5.0",
     "chart.js": "^3.5.0",
     "classnames": "^2.3.1",
+    "common-library": "https://Volodymyrquo:CEEzHUzErT3P2vhAKLqw@bitbucket.org/sumraprague/component-common-library.git",
     "fontsource-aileron": "^4.0.0",
     "react": "^17.0.2",
     "react-addons-css-transition-group": "^15.6.2",
