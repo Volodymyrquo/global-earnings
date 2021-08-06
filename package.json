@@ -45,6 +45,7 @@
     "@fontsource/noto-serif": "^4.5.0",
     "chart.js": "^3.5.0",
     "classnames": "^2.3.1",
+    "common-library": "https://github.com/Volodymyrquo/common-library.git",
     "fontsource-aileron": "^4.0.0",
     "react-chartjs-2": "^3.0.4",
     "react-icons": "^4.2.0",
