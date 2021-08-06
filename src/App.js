@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React from 'react'
 import 'common-library/src/assets/scss/styles.scss'
 import { GlobalEarningsBtn } from './components'
 import { Switch, Route, Redirect } from 'react-router-dom'
