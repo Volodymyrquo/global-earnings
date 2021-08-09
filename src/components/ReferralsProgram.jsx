@@ -16,7 +16,7 @@ import pers from '../assets/images/users/pers.svg'
 import EarningsChart from './earningsChart'
 import { Link } from 'react-router-dom'
 
-const ReferralsProgram = ({ nameBronzeBtn }) => {
+const ReferralsProgram = ({ nameBronzeBtn, goToLeaderboard }) => {
   const [result, setResult] = useState(100000)
   const [invitedUsers, setInvitedUsers] = useState(10000)
   const [bonus, setBonus] = useState('$ 5')
@@ -49,7 +49,13 @@ const ReferralsProgram = ({ nameBronzeBtn }) => {
   return (
     <section className='page-content__global-earnings global-earnings-main'>
       <div className='global-earnings-main__inner-1'>
-        <div className='global-earnings-main__box-1'>
+        <div
+          className='global-earnings-main__box-1'
+          style={{
+            backgroundImage: `url(${
+              require('../assets/images/users/bacground.jpg').default
+            })`,
+          }}>
           <h3 className='global-earnings-main__title-1'>Your earnings</h3>
           <div className='global-earnings-main__inner'>
             <p className='global-earnings-main__total'>Total earnings</p>
@@ -89,7 +95,8 @@ const ReferralsProgram = ({ nameBronzeBtn }) => {
             <img src={money} alt='img money' />
 
             <Link
-              to='/pioneer_memberships'
+              to='/pioneer-membership'
+              onClick={() => goToLeaderboard('/pioneer-membership')}
               className='global-earnings-main__button'>
               Upgrade plan
             </Link>
@@ -186,10 +193,11 @@ const ReferralsProgram = ({ nameBronzeBtn }) => {
             </tbody>
           </table>
           <Link
-            to='/referrals'
-            onClick={() => {
+            to='/leaderboard'
+            /*    onClick={() => {
               setSubPage('leaderboard')
-            }}
+            }} */
+            onClick={() => goToLeaderboard('/leaderboard')}
             className='leaderboard-block__link'>
             Go to Leaderboard page
             <img src={arrow} alt='arrow' />
@@ -251,7 +259,13 @@ const ReferralsProgram = ({ nameBronzeBtn }) => {
             </button>
           </div>
         </div>
-        <div className='global-earnings-main__box-5'>
+        <div
+          className='global-earnings-main__box-5'
+          style={{
+            backgroundImage: `url(${
+              require('../assets/images/users/123.jpg').default
+            })`,
+          }}>
           <h3 className='global-earnings-main__title-1'>
             Calculate projected earnings
           </h3>
@@ -319,7 +333,13 @@ const ReferralsProgram = ({ nameBronzeBtn }) => {
             alt='coins'
           />
         </div>
-        <div className='global-earnings-main__box-6'>
+        <div
+          className='global-earnings-main__box-6'
+          style={{
+            backgroundImage: `url(${
+              require('../assets/images/users/1234.svg').default
+            })`,
+          }}>
           <h3 className='global-earnings-main__box-3-title'>
             <span className='global-earnings-main__title-color'>{`${nameBronzeBtn} plan `}</span>
             projected earnings

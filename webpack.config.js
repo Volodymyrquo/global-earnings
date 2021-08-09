@@ -7,7 +7,6 @@ module.exports = {
     path: path.resolve('build'),
     filename: 'index.js',
     libraryTarget: 'commonjs2',
-    publicPath: './build/',
   },
   module: {
     rules: [
@@ -32,8 +31,5 @@ module.exports = {
   },
   externals: {
     react: 'react',
-    'react-dom': 'react-dom',
-    'react-router-dom': 'react-router-dom',
-    'react-router': 'react-router',
   },
 }

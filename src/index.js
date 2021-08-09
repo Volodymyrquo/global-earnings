@@ -1,7 +1,7 @@
 import React from 'react'
 import { Provider } from './context/context'
 import App from './App'
-import { HashRouter as Router } from 'react-router-dom'
+import { BrowserRouter as Router } from 'react-router-dom'
 
 const index = (props) => {
   return (

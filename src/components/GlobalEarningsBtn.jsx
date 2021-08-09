@@ -6,16 +6,19 @@ import iconReferralsGrey from '../assets/images/sumra/icon-referrals-grey.svg'
 
 const GlobalEarningsBtn = ({ path }) => {
   const [activeButton, setActiveButton] = useState('/referrals_program')
-  const handleOnClick = (url) => {
-    setActiveButton(url)
+  const handleOnClick = (urlClicked) => {
+    setActiveButton(urlClicked)
   }
+
+  const windowLocation = window.location.pathname
+
   return (
     <div className='page-content__wrap'>
       <section className='page-content__global-earnings global-earnings'>
         <Link
           to={`${path}/referrals_program`}
           className={
-            activeButton === `/referrals_program`
+            windowLocation === `${path}/referrals_program`
               ? 'link-active'
               : 'global-earnings__btn'
           }
@@ -32,7 +35,7 @@ const GlobalEarningsBtn = ({ path }) => {
         <Link
           to={`${path}/rewards_program`}
           className={
-            activeButton === `/rewards_program`
+            windowLocation === `${path}/rewards_program`
               ? 'link-active'
               : 'global-earnings__btn'
           }
@@ -49,7 +52,7 @@ const GlobalEarningsBtn = ({ path }) => {
         <Link
           to={`${path}/statistics`}
           className={
-            activeButton === `/statistics`
+            windowLocation === `${path}/statistics`
               ? 'link-active'
               : 'global-earnings__btn'
           }
