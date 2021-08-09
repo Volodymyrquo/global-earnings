@@ -8,9 +8,10 @@ import {
   TotalsBySections,
 } from './components'
 
-const App = ({ path, goToLeaderboard }) => {
+const App = ({ path, goToLeaderboard, location, handleOnClick }) => {
+  console.log('#### path ####  ' + location.pathname)
   return (
-    <>
+    <div style={{ position: 'relative', top: '100px' }}>
       <GlobalEarningsBtn path={path} />
 
       <Switch>
@@ -22,12 +23,17 @@ const App = ({ path, goToLeaderboard }) => {
         </Route>
         <Route
           path={`${path}/referrals_program`}
-          render={() => <ReferralsProgram goToLeaderboard={goToLeaderboard} />}
+          render={() => (
+            <ReferralsProgram
+              goToLeaderboard={goToLeaderboard}
+              handleOnClick={handleOnClick}
+            />
+          )}
         />
         <Route path={`${path}/rewards_program`} component={RewardsProgram} />
         <Route path={`${path}/statistics`} component={TotalsBySections} />
       </Switch>
-    </>
+    </div>
   )
 }
 
