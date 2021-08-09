@@ -16,7 +16,11 @@ import pers from '../assets/images/users/pers.svg'
 import EarningsChart from './earningsChart'
 import { Link } from 'react-router-dom'
 
-const ReferralsProgram = ({ nameBronzeBtn, goToLeaderboard }) => {
+const ReferralsProgram = ({
+  nameBronzeBtn,
+  goToLeaderboard,
+  handleOnClick,
+}) => {
   const [result, setResult] = useState(100000)
   const [invitedUsers, setInvitedUsers] = useState(10000)
   const [bonus, setBonus] = useState('$ 5')
@@ -221,7 +225,8 @@ const ReferralsProgram = ({ nameBronzeBtn, goToLeaderboard }) => {
                 nameBronzeBtn === 'Bronze'
                   ? 'global-earnings-main__pioneer-btn-active'
                   : 'global-earnings-main__pioneer-btn'
-              }>
+              }
+              onClick={handleOnClick}>
               <img
                 className='global-earnings-main__pioneer-img'
                 src={bronze}

@@ -11,6 +11,7 @@ const GlobalEarningsBtn = ({ path }) => {
   }
 
   const windowLocation = window.location.pathname
+  console.log('##### window location #####  ' + windowLocation)
 
   return (
     <div className='page-content__wrap'>
