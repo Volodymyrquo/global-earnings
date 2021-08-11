@@ -8,10 +8,9 @@ import {
   TotalsBySections,
 } from './components'
 
-const App = ({ path, goToLeaderboard, location, handleOnClick }) => {
-  console.log('#### path ####  ' + location.pathname)
+const App = ({ path, goToLeaderboard, handleOnClick }) => {
   return (
-    <div style={{ position: 'relative', top: '100px' }}>
+    <div>
       <GlobalEarningsBtn path={path} />
 
       <Switch>
