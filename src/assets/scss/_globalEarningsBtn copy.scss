@@ -13,12 +13,11 @@
     gap: 8px;
     width: 183px;
     height: 38px;
-    color: #5c5d6a;
+    color: #5C5D6A;
 
     &:hover {
-      background: #7165e3;
-      box-shadow: 0px 10px 20px rgba(97, 105, 255, 0.1),
-        0px 10px 20px rgba(97, 105, 255, 0.1);
+      background: #7165E3;
+      box-shadow: 0px 10px 20px rgba(97, 105, 255, 0.1), 0px 10px 20px rgba(97, 105, 255, 0.1);
       border-radius: 4px;
       color: #fff;
     }
@@ -36,15 +35,14 @@
   gap: 8px;
   width: 183px;
   height: 38px;
-  background: #7165e3;
-  box-shadow: 0px 10px 20px rgba(97, 105, 255, 0.1),
-    0px 10px 20px rgba(97, 105, 255, 0.1);
+  background: #7165E3;
+  box-shadow: 0px 10px 20px rgba(97, 105, 255, 0.1), 0px 10px 20px rgba(97, 105, 255, 0.1);
   border-radius: 4px;
   color: #fff !important;
 }
-/* 
+
 .page-content__wrap {
   @media (max-width: 768px) {
     overflow-x: scroll;
   }
-} */
+}

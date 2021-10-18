@@ -7,9 +7,7 @@ const index = (props) => {
   return (
     <Router>
       <Provider>
-        <div style={{ padding: '30px ' }}>
-          <App {...props} />
-        </div>
+        <App {...props} />
       </Provider>
     </Router>
   )

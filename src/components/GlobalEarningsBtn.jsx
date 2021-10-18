@@ -17,9 +17,9 @@ const GlobalEarningsBtn = ({ path }) => {
     <div className='page-content__wrap'>
       <section className='page-content__global-earnings global-earnings'>
         <Link
-          to={`${path}/referrals_program`}
+          to={`/referrals_program`}
           className={
-            windowLocation === `${path}/referrals_program`
+            windowLocation === `/referrals_program`
               ? 'link-active'
               : 'global-earnings__btn'
           }
@@ -34,9 +34,9 @@ const GlobalEarningsBtn = ({ path }) => {
           Referrals program
         </Link>
         <Link
-          to={`${path}/rewards_program`}
+          to={`/rewards_program`}
           className={
-            windowLocation === `${path}/rewards_program`
+            windowLocation === `/rewards_program`
               ? 'link-active'
               : 'global-earnings__btn'
           }
@@ -51,9 +51,9 @@ const GlobalEarningsBtn = ({ path }) => {
           Rewards program
         </Link>
         <Link
-          to={`${path}/statistics`}
+          to={`/statistics`}
           className={
-            windowLocation === `${path}/statistics`
+            windowLocation === `/statistics`
               ? 'link-active'
               : 'global-earnings__btn'
           }
